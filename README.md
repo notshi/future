@@ -5,6 +5,8 @@
 
 - EP 1 ---- COLOUR
 
+More on [Mixcloud](https://www.mixcloud.com/thefutureincolour/).
+
 
 ## ABOUT
 
