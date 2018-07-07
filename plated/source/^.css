@@ -49,6 +49,7 @@ a img 	{border:none;}
 
 .wrap	{margin:0 auto; width:960px; padding-bottom:4em;}
 .logo_wrap	{padding-bottom:4em;}
+.pod_wrap	{margin:0 auto; width:840px;}
 
 .bio_wrap	{width:840px; margin:0 auto;}
 .bio	{display:inline-block; vertical-align:top; width:47.5%; background-color:var(--base); padding:2.5em; margin-top:4em;}
