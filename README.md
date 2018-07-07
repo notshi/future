@@ -3,9 +3,7 @@
 
 ### Women of colour chewing the fat about the future from our perspective.
 
-- EP 1 ---- COLOUR
-
-More on [Mixcloud](https://www.mixcloud.com/thefutureincolour/).
+- [EP 1 ---- There are black people in the future](https://www.mixcloud.com/thefutureincolour/episode-1-there-are-black-people-in-the-future/)
 
 
 ## ABOUT
