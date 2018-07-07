@@ -8,25 +8,83 @@
 <link rel="icon" type="image/png" href="favicon96.png" sizes="96x96">  
 <style>
 
-/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,iframe,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
+/*
 
-body	{background:#7200e4; font-family:'Capriola', sans-serif; font-size:16px; line-height:24px; color:#FFF; width:100%; padding:50px;}
-h1		{font-size:4em; font-weight:normal; color:#1400ff;}
-h2		{font-size:2em; font-weight:normal;}
+	Variables:
+	
+	a		|	Transition css animations
 
-a		{color:#1400ff;}
+*/
 
-a.bar	{color:#f7f4fd; background-color:#3a3a3a; border-radius:4px; padding:5px; text-decoration:none; border-bottom:none;}
-a.bar:hover	{background-color:#1400ff; border-bottom:none;}
+:root {
+  --base:#fff;
+  --base_back:#ffcc00;
+  --base_back_alt:#7200e4;
+  --base_font:#111;
+}
+
+/*
+
+	Reset & base css
+	
+	body	|	100vh - Avoid the IE 10-11 `min-height` bug.
+
+*/
+
+*{box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -ms-box-sizing:border-box;}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:top;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+a,img		{border:0; outline:none;}textarea:focus,input:focus{outline:0;}*:focus{outline:0;}
+body, html	{-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; min-width:100%; min-height:100%; width:100%; height:100%; height:100vh; margin:0 auto;}
 
 
-.nav	{display:inline-block; vertical-align:top; width:50%;}
-.nav:nth-of-type(2)	{text-align:right;}
+/*
 
-.line, .blog_wrap	{border-top:1px dashed #1400ff; margin-top:40px; margin-bottom:40px; position:relative;}
-.blog_info	{position:absolute; right:10px; top:10px;}
+	Main styles for the entire site
+	
+	a		|	Transition css animations
+
+*/
+
+body 	{background-color:var(--base_back); color:var(--base_font); display:flex; flex-direction:column; font-family:"Capriola",Arial,sans-serif; font-size:16px; line-height:24px; position:relative; padding-top:2em; scroll-behavior:smooth;}
+
+a		{-webkit-transition:all .2s ease-in-out; -moz-transition:all .2s ease-in-out; -o-transition:all .2s ease-in-out; -ms-transition:all .2s ease-in-out; transition:all .2s ease-in-out;}
+
+a 		{color:var(--base_font); text-decoration:none;}
+a:hover {color:var(--base); cursor:pointer;}
+a img 	{border:none;}
+
+.wrap	{margin:0 auto; width:960px; padding-bottom:4em;}
+.logo_wrap	{padding-bottom:4em;}
+
+.bio_wrap	{width:840px; margin:0 auto;}
+.bio	{display:inline-block; vertical-align:top; width:47.5%; background-color:var(--base); padding:2.5em; margin-top:4em;}
+.bio.one{margin-right:5%;}
+.bio_img	{text-align:center; display:block; width:200px; height:200px; border-radius:250px; margin:0 auto;}
+.bio_img.edafe	{background:url('.//data/edafe.jpg')center center;}
+.bio_img.shi	{background:url('.//data/shi.jpg')center center;}
+.bio_text	{margin-top:2em; font-size:14px; line-height:24px;}
+.bio_text span	{font-weight:bold;}
 
 </style></head>
-<body><p>THE FUTURE IN COLOUR<br>Women of colour chewing the fat about the future from our perspective.</p>
-</body>
+<body><div class="wrap">
+	<div class="logo_wrap">
+		<img src=".//data/logo600.png" width="600">
+	</div>
+	<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&hide_artwork=1&feed=%2Fthefutureincolour%2Fepisode-1-there-are-black-people-in-the-future%2F" frameborder="0" ></iframe>
+	<div class="bio_wrap">
+		<div class="bio one">
+			<div class="bio_img edafe"></div>
+			<div class="bio_text">
+				<span>Edafe Onerhime</span> is a consultant on Data Science and Data Analysis who has over 20 years of experience answering difficult questions about open data. She has helped governments, charities and businesses make better decisions and build stronger relationships by understanding, using and sharing their data.
+			</div>
+		</div><div class="bio">
+			<div class="bio_img shi"></div>
+			<div class="bio_text">
+				Caught amidst the intersection of technology, open data, art &amp; music, <span>shi Blank</span> is a feral games developer who taught herself how to code. A fierce believer of assessible knowledge, shi mentors kids and parents regularly at code clubs and is currently creating a women-focused makerspace in the city they are based in.
+			</div>
+		</div>
+	</div>
+</div></body>
 </html>
