@@ -4,7 +4,14 @@
 
 	Variables:
 	
-	a		|	Transition css animations
+	------------------------------------------------------------------
+	Basic colours for background and fonts
+	------------------------------------------------------------------
+	
+	base 			- White				
+	base_back 		- Warm yellow		
+	base_back_alt 	- Brinjal		
+	base_font 		- Off black			
 
 */
 
@@ -44,18 +51,68 @@ body 	{background-color:var(--base_back); color:var(--base_font); display:flex; 
 a		{-webkit-transition:all .2s ease-in-out; -moz-transition:all .2s ease-in-out; -o-transition:all .2s ease-in-out; -ms-transition:all .2s ease-in-out; transition:all .2s ease-in-out;}
 
 a 		{color:var(--base_font); text-decoration:none;}
-a:hover {color:var(--base); cursor:pointer;}
+a:hover {color:var(--base); cursor:pointer; background-color:var(--base_back);}
 a img 	{border:none;}
 
-.wrap	{margin:0 auto; width:960px; padding-bottom:4em;}
+.wrap		{margin:0 auto; width:960px; padding-bottom:4em;}
 .logo_wrap	{padding-bottom:4em;}
 .pod_wrap	{margin:0 auto; width:840px;}
 
 .bio_wrap	{width:840px; margin:0 auto;}
-.bio	{display:inline-block; vertical-align:top; width:47.5%; background-color:var(--base); padding:2.5em; margin-top:4em;}
-.bio.one{margin-right:5%;}
+.bio		{display:inline-block; vertical-align:top; width:47.5%; background-color:var(--base); padding:2.5em; margin-top:4em;}
+.bio.one	{margin-right:5%;}
 .bio_img	{text-align:center; display:block; width:200px; height:200px; border-radius:250px; margin:0 auto;}
-.bio_img.edafe	{background:url('{_root}/data/edafe.jpg')center center;}
-.bio_img.shi	{background:url('{_root}/data/shi.jpg')center center;}
 .bio_text	{margin-top:2em; font-size:14px; line-height:24px;}
-.bio_text span	{font-weight:bold;}
+.bio_text a	{font-weight:bold; text-decoration:none;}
+
+
+/*
+
+	Special effects for bio images
+	
+	https://bennettfeely.com/image-effects/
+	
+*/
+
+.bio_img.shi {
+  background-image: url('{_root}/data/shi.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bio_img.edafe {
+  background-image: url('{_root}/data/edafe.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (mix-blend-mode: multiply) {
+  .bio_img {
+    position: relative;
+    overflow: hidden;
+    background-color: magenta;
+    background-blend-mode: screen;
+  }
+  .bio_img:before, .bio_img:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    mix-blend-mode: multiply;
+    transform: scale(1.05);
+  }
+  .bio_img:before {
+    background-color: yellow;
+    background-blend-mode: screen;
+    transform-origin: top left;
+  }
+  .bio_img:after {
+    background-color: cyan;
+    background-blend-mode: screen;
+    transform-origin: bottom right;
+  }
+}
