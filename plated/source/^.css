@@ -35,7 +35,8 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:top;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
 a,img		{border:0; outline:none;}textarea:focus,input:focus{outline:0;}*:focus{outline:0;}
-body, html	{-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; min-width:100%; min-height:100%; width:100%; height:100%; height:100vh; margin:0 auto;}
+body, html	{-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; min-width:100%; width:100%; height:100%; height:100vh; margin:0 auto;}
+body		{min-height:100%; min-height:100vh;}
 
 
 /*
@@ -55,7 +56,8 @@ a:hover {color:var(--base); cursor:pointer; background-color:var(--base_back);}
 a img 	{border:none;}
 
 .wrap		{margin:0 auto; width:960px; padding-bottom:4em;}
-.logo_wrap	{padding-bottom:4em;}
+.logo_wrap	{padding-bottom:4em; position:relative;}
+.logo_wrap p {color:#FFF; width:30%; font-size:2em; line-height:1.25em; position:absolute; right:2em; top:1.5em; text-align:right;}
 .pod_wrap	{margin:0 auto; width:840px;}
 
 .bio_wrap	{width:840px; margin:0 auto;}
@@ -64,6 +66,9 @@ a img 	{border:none;}
 .bio_img	{text-align:center; display:block; width:200px; height:200px; border-radius:250px; margin:0 auto;}
 .bio_text	{margin-top:2em; font-size:14px; line-height:24px;}
 .bio_text a	{font-weight:bold; text-decoration:none;}
+
+/*.footer		{background:url('{_root}/data/pattern0.png'); position:absolute; bottom:-150px; left:0; background-size:cover; background-position:center; width:100%; height:400px; z-index:-1;}*/
+.footer		{flex-shrink:0; padding:4em; background:url('{_root}/data/pattern0.png') no-repeat center center; background-size:cover; margin-top:6em; position:absolute; bottom:-150px; left:0; width:100%; height:400px; z-index:-1;}
 
 
 /*
@@ -115,4 +120,16 @@ a img 	{border:none;}
     background-blend-mode: screen;
     transform-origin: bottom right;
   }
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+	body	{padding-top:4em; min-height:1px; max-height:999999px;}
+	.footer	{bottom:0; height:450px;}
+
 }
