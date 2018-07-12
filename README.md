@@ -7,4 +7,4 @@
 ### Women of colour chewing the fat about the future from our perspective.
 
 *Broadcasting our voices into the internet.*
-Brought to you by [@ekoner](http://twitter.com/ekoner) and [@shi](http://twitter.com/shi).
+Brought to you by [@ekoner](http://twitter.com/ekoner) and [@shi](http://twitter.com/shi). 
